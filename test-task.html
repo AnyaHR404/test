@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тестовое задание</title>
+<style>
+  :root {
+    --green-1: rgba(46, 204, 113, 0.35);
+    --green-2: rgba(129, 236, 189, 0.25);
+    --green-3: rgba(200, 250, 220, 0.4);
+    --white: rgba(255, 255, 255, 0.85);
+    --text: #000000;
+    --card-border: rgba(46, 204, 113, 0.4);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--green-1) 0%, var(--white) 35%, var(--green-3) 65%, var(--green-2) 100%);
+    background-attachment: fixed;
+  }
+
+  .wrapper {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  header.page-header {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    backdrop-filter: blur(6px);
+  }
+
+  header.page-header h1 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    color: var(--text);
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .badge {
+    background: rgba(46, 204, 113, 0.25);
+    border: 1px solid var(--card-border);
+    color: var(--text);
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
+  .quote-block {
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 4px solid rgba(46, 204, 113, 0.7);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    font-style: italic;
+    color: var(--text);
+    font-size: 16px;
+  }
+
+  .quote-block span.label {
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #1c8a52;
+    margin-bottom: 6px;
+  }
+
+  section.block {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 22px;
+    backdrop-filter: blur(6px);
+    transition: box-shadow 0.2s ease;
+  }
+
+  section.block:hover {
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.18);
+  }
+
+  section.block h2 {
+    margin: 0 0 12px;
+    font-size: 19px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(46, 204, 113, 0.55);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  section.block p, section.block li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 6px 0;
+  }
+
+  section.block ul, section.block ol {
+    margin: 10px 0 0;
+    padding-left: 22px;
+  }
+
+  .editable {
+    outline: none;
+  }
+
+  .editable:focus {
+    background: rgba(46, 204, 113, 0.08);
+    border-radius: 6px;
+  }
+
+  .hint {
+    font-size: 12px;
+    color: #2e7d4f;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: #1c8a52;
+    margin-top: 30px;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 600px) {
+    header.page-header, section.block {
+      padding: 18px 18px;
+    }
+    header.page-header h1 {
+      font-size: 21px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header class="page-header">
+    <h1 class="editable" contenteditable="true">Тестовое задание: внедрение AI в поддержку</h1>
+    <div class="meta">
+      <span class="badge">⏱ Время выполнения: 1 час</span>
+      <span class="badge">📄 Объём: 1–2 страницы</span>
+    </div>
+  </header>
+
+  <div class="quote-block">
+    <span class="label">Запрос клиента</span>
+    <p class="editable" contenteditable="true">«Хотим внедрить AI в поддержку, потому что операторы долго отвечают на повторяющиеся вопросы».</p>
+  </div>
+
+  <section class="block">
+    <h2><span class="num">1</span><span class="editable" contenteditable="true">Вопросы для первого брифинга</span></h2>
+    <p class="editable" contenteditable="true">Подготовьте 8–10 вопросов, которые помогут прояснить задачу клиента на первой встрече.</p>
+    <ol class="editable" contenteditable="true">
+      <li>Вопрос 1…</li>
+      <li>Вопрос 2…</li>
+      <li>Вопрос 3…</li>
+      <li>Вопрос 4…</li>
+      <li>Вопрос 5…</li>
+      <li>Вопрос 6…</li>
+      <li>Вопрос 7…</li>
+      <li>Вопрос 8…</li>
+    </ol>
+    <p class="hint">Впишите свои вопросы прямо в этот список — блок редактируемый.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">2</span><span class="editable" contenteditable="true">План следующих шагов после брифинга</span></h2>
+    <p class="editable" contenteditable="true">Опишите краткий план действий команды после проведения брифинга.</p>
+    <ul class="editable" contenteditable="true">
+      <li>Шаг 1…</li>
+      <li>Шаг 2…</li>
+      <li>Шаг 3…</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">3</span><span class="editable" contenteditable="true">Риски и допущения</span></h2>
+    <p class="editable" contenteditable="true">Перечислите риски и допущения, которые важно проверить до старта проекта.</p>
+    <ul class="editable" contenteditable="true">
+      <li>Риск / допущение 1…</li>
+      <li>Риск / допущение 2…</li>
+      <li>Риск / допущение 3…</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">4</span><span class="editable" contenteditable="true">Черновик письма клиенту по итогам встречи</span></h2>
+    <p class="editable" contenteditable="true">
+      Тема письма: Итоги встречи и следующие шаги<br><br>
+      Здравствуйте, [Имя]!<br><br>
+      Спасибо за встречу — [краткое резюме обсуждения]. Ниже фиксируем договорённости и дальнейшие шаги: [шаги].<br><br>
+      Будем на связи,<br>
+      [Ваше имя]
+    </p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">5</span><span class="editable" contenteditable="true">Использование AI при выполнении задания</span></h2>
+    <p class="editable" contenteditable="true">Если использовали AI — укажите, для чего именно и как проверяли результат.</p>
+  </section>
+
+  <footer>
+    Страница создана для выполнения тестового задания · можно редактировать прямо в браузере или через код
+  </footer>
+
+</div>
+</body>
+</html>
